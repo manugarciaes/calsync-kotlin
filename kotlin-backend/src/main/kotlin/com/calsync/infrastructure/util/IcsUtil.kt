@@ -85,15 +85,19 @@ object IcsUtil {
         // Check if it's an all-day event
         val isAllDay = vevent.startDate.isUtc.not() && vevent.startDate.date !is java.util.Date
         
+        // Get or default timezone
+        val timeZone = vevent.startDate?.timeZone?.id ?: ZoneId.systemDefault().id
+        
         return Event(
-            id = EventId.create(),
+            id = EventId.generate(),
             calendarId = calendarId,
-            externalId = uid,
+            uid = uid,
             title = summary,
             description = description,
             location = location,
             startTime = startInstant,
             endTime = endInstant,
+            timeZone = timeZone,
             isAllDay = isAllDay
         )
     }
