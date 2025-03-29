@@ -1,0 +1,78 @@
+version: '3.8'
+
+services:
+  # PostgreSQL database service
+  postgres:
+    image: postgres:15
+    container_name: calsync-postgres-dev
+    environment:
+      POSTGRES_DB: calsync
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data-dev:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - calsync-network-dev
+
+  # Kotlin backend service with hot reload
+  backend:
+    image: gradle:7.6.1-jdk17
+    container_name: calsync-backend-dev
+    working_dir: /app
+    command: >
+      bash -c "gradle build --no-daemon && 
+               gradle run --no-daemon -t"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      - DB_URL=jdbc:postgresql://postgres:5432/calsync
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - MAIL_HOST=smtp.gmail.com
+      - MAIL_PORT=587
+      - MAIL_USERNAME=${MAIL_USERNAME:-}
+      - MAIL_PASSWORD=${MAIL_PASSWORD:-}
+      - MAIL_FROM=${MAIL_FROM:-calsync@example.com}
+      - MAIL_FROM_NAME=${MAIL_FROM_NAME:-CalSync}
+      - CALENDAR_SYNC_INTERVAL_MINUTES=15
+      - TZ=UTC
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./kotlin-backend:/app
+      - gradle-cache-dev:/root/.gradle
+    networks:
+      - calsync-network-dev
+    restart: unless-stopped
+
+  # Adminer for database management
+  adminer:
+    image: adminer:latest
+    container_name: calsync-adminer-dev
+    ports:
+      - "8081:8080"
+    depends_on:
+      - postgres
+    environment:
+      - ADMINER_DEFAULT_SERVER=postgres
+    networks:
+      - calsync-network-dev
+    restart: unless-stopped
+
+networks:
+  calsync-network-dev:
+    driver: bridge
+
+volumes:
+  postgres-data-dev:
+    driver: local
+  gradle-cache-dev:
+    driver: local

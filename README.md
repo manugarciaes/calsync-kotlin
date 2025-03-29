@@ -1,63 +1,143 @@
-# CalSync - Calendar Synchronization Application
+# CalSync - Calendar Synchronization Platform
 
-CalSync is a robust calendar synchronization application built with Kotlin and Ktor that aggregates ICS calendars from various sources and provides shareable views of free slots.
+CalSync is a sophisticated calendar synchronization platform that aggregates ICS calendars from multiple sources, providing intelligent free slot detection and sharing capabilities.
 
 ## Features
 
-- **Calendar Synchronization**: Import calendars from URLs or uploaded ICS files
-- **Free Slot Management**: Create customizable free slots based on your availability
-- **Public Booking**: Share your availability with public links for easy booking
-- **Email Notifications**: Automatic notifications for bookings and cancellations
-- **Multi-language Support**: Internationalization for global users
+- ICS calendar synchronization from multiple sources
+- Automatic calendar updates with configurable intervals
+- Free slot detection between multiple calendars
+- Public URL for sharing availability
+- Booking system for appointments
+- Email notifications for bookings
+- Multi-language support
+- Modern, clean UI
 
 ## Technology Stack
 
-- **Backend**: Kotlin, Ktor
-- **Database**: PostgreSQL
-- **Architecture**: Domain-Driven Design
-- **Concurrency**: Kotlin Coroutines
-- **Scheduling**: Background processing for calendar updates
-- **Authentication**: Secure user authentication and authorization
+- **Backend:** Kotlin with Ktor framework
+- **Database:** PostgreSQL
+- **Architecture:** Domain-Driven Design
+- **Containerization:** Docker & Docker Compose
+- **Calendar Format:** ICS (iCalendar)
 
-## Project Structure
+## Prerequisites
 
-The application follows a clean DDD architecture with the following layers:
+- Docker and Docker Compose installed
+- Git
 
-- **Domain Layer**: Core business models and repository interfaces
-- **Application Layer**: Services implementing business logic
-- **Infrastructure Layer**: Repository implementations and external integrations
-- **Interface Layer**: API endpoints and controllers
+## Getting Started
 
-## Setup and Configuration
+### Clone the Repository
 
-### Prerequisites
+```bash
+git clone https://github.com/manugarciaes/calsync-kotlin.git
+cd calsync-kotlin
+```
 
-- JDK 11+
-- PostgreSQL 12+
-- Docker (optional for containerized deployment)
+### Configure Environment Variables
 
-### Environment Variables
+Copy the example environment file and modify it according to your needs:
 
-The application uses the following environment variables:
+```bash
+cp .env.example .env
+```
+
+Open the `.env` file and set your values:
 
 ```
-# Database Configuration
-DB_URL=jdbc:postgresql://localhost:5432/calsync
-DB_USERNAME=postgres
-DB_PASSWORD=postgres
-
-# Email Configuration
-MAIL_HOST=smtp.gmail.com
-MAIL_PORT=587
+# Mail configuration (required for sending booking confirmations)
 MAIL_USERNAME=your-email@gmail.com
 MAIL_PASSWORD=your-app-password
 MAIL_FROM=your-email@gmail.com
 MAIL_FROM_NAME=CalSync
-
-# Calendar Sync Configuration
-CALENDAR_SYNC_INTERVAL_MINUTES=15
 ```
+
+### Development Setup
+
+For development with hot-reloading:
+
+```bash
+make dev
+```
+
+Or using Docker Compose directly:
+
+```bash
+docker-compose -f docker-compose-dev.yml up --build
+```
+
+### Production Setup
+
+For production-like setup:
+
+```bash
+make prod
+```
+
+Or using Docker Compose directly:
+
+```bash
+docker-compose up --build
+```
+
+### Initialize Database
+
+To create the database schema:
+
+```bash
+make init-db
+```
+
+### Stop All Services
+
+```bash
+make down
+```
+
+### Clean All Data
+
+This will remove all containers and volumes:
+
+```bash
+make clean
+```
+
+## Accessing the Application
+
+- **Backend API:** http://localhost:8080
+- **Database Admin (Adminer):** http://localhost:8081
+  - System: PostgreSQL
+  - Server: postgres
+  - Username: postgres
+  - Password: postgres
+  - Database: calsync
+
+## Project Structure
+
+The project follows Domain-Driven Design principles and is organized into the following layers:
+
+- **Domain Layer:** Core business logic and entities
+  - `domain/model`: Domain entities
+  - `domain/repository`: Repository interfaces
+- **Application Layer:** Application services and use cases
+  - `application/service`: Services that implement business use cases
+  - `application/scheduler`: Scheduling logic for calendar synchronization
+- **Infrastructure Layer:** Implementation details
+  - `infrastructure/database`: Database configuration
+  - `infrastructure/repository`: Repository implementations
+- **Interface Layer:** REST API endpoints
+  - `interface/rest`: REST controllers
+  - `interface/dto`: Data transfer objects
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
