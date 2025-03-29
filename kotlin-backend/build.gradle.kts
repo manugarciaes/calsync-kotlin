@@ -16,6 +16,13 @@ application {
 
 repositories {
     mavenCentral()
+    // Additional repository for iCal4j release candidates
+    maven {
+        url = uri("https://oss.sonatype.org/content/repositories/releases/")
+    }
+    maven {
+        url = uri("https://oss.sonatype.org/content/repositories/snapshots/")
+    }
 }
 
 val ktorVersion = "2.3.8"
@@ -58,7 +65,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:$kotlinxDatetimeVersion")
     
     // ICS Parsing
-    implementation("net.fortuna.ical4j:ical4j:4.0.0-rc3")
+    implementation("net.fortuna.ical4j:ical4j:3.2.12")
     
     // Email
     implementation("org.simplejavamail:simple-java-mail:7.5.0")
