@@ -42,23 +42,23 @@ class UserRepositoryImpl : UserRepository {
         
         if (exists) {
             // Update existing user
-            UsersTable.update({ UsersTable.id eq user.id.value }) {
-                it[username] = user.username
-                it[email] = user.email
-                it[password] = user.password
-                it[name] = user.name
-                it[updatedAt] = user.updatedAt.toJavaInstant()
+            UsersTable.update({ UsersTable.id eq user.id.value }) { stmt ->
+                stmt[UsersTable.username] = user.username
+                stmt[UsersTable.email] = user.email
+                stmt[UsersTable.password] = user.password
+                stmt[UsersTable.name] = user.name
+                stmt[UsersTable.updatedAt] = user.updatedAt.toJavaInstant()
             }
         } else {
             // Insert new user
-            UsersTable.insert {
-                it[id] = user.id.value
-                it[username] = user.username
-                it[email] = user.email
-                it[password] = user.password
-                it[name] = user.name
-                it[createdAt] = user.createdAt.toJavaInstant()
-                it[updatedAt] = user.updatedAt.toJavaInstant()
+            UsersTable.insert { stmt ->
+                stmt[UsersTable.id] = user.id.value
+                stmt[UsersTable.username] = user.username
+                stmt[UsersTable.email] = user.email
+                stmt[UsersTable.password] = user.password
+                stmt[UsersTable.name] = user.name
+                stmt[UsersTable.createdAt] = user.createdAt.toJavaInstant()
+                stmt[UsersTable.updatedAt] = user.updatedAt.toJavaInstant()
             }
         }
         

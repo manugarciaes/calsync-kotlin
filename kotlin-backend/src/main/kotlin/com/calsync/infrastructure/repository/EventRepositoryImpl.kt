@@ -100,35 +100,35 @@ class EventRepositoryImpl : EventRepository {
         
         if (exists) {
             // Update existing event
-            EventsTable.update({ EventsTable.id eq event.id.value }) {
-                it[calendarId] = event.calendarId.value
-                it[uid] = event.uid
-                it[title] = event.title
-                it[description] = event.description
-                it[location] = event.location
-                it[startTime] = java.sql.Timestamp.from(event.startTime.toJavaInstant())
-                it[endTime] = java.sql.Timestamp.from(event.endTime.toJavaInstant())
-                it[timeZone] = event.timeZone
-                it[isAllDay] = event.isAllDay
-                it[recurrenceRule] = event.recurrenceRule
-                it[updatedAt] = java.sql.Timestamp.from(now.toJavaInstant())
+            EventsTable.update({ EventsTable.id eq event.id.value }) { stmt ->
+                stmt[EventsTable.calendarId] = event.calendarId.value
+                stmt[EventsTable.uid] = event.uid
+                stmt[EventsTable.title] = event.title
+                stmt[EventsTable.description] = event.description
+                stmt[EventsTable.location] = event.location
+                stmt[EventsTable.startTime] = java.sql.Timestamp.from(event.startTime.toJavaInstant())
+                stmt[EventsTable.endTime] = java.sql.Timestamp.from(event.endTime.toJavaInstant())
+                stmt[EventsTable.timeZone] = event.timeZone
+                stmt[EventsTable.isAllDay] = event.isAllDay
+                stmt[EventsTable.recurrenceRule] = event.recurrenceRule
+                stmt[EventsTable.updatedAt] = java.sql.Timestamp.from(now.toJavaInstant())
             }
         } else {
             // Insert new event
-            EventsTable.insert {
-                it[id] = event.id.value
-                it[calendarId] = event.calendarId.value
-                it[uid] = event.uid
-                it[title] = event.title
-                it[description] = event.description
-                it[location] = event.location
-                it[startTime] = java.sql.Timestamp.from(event.startTime.toJavaInstant())
-                it[endTime] = java.sql.Timestamp.from(event.endTime.toJavaInstant())
-                it[timeZone] = event.timeZone
-                it[isAllDay] = event.isAllDay
-                it[recurrenceRule] = event.recurrenceRule
-                it[createdAt] = java.sql.Timestamp.from(now.toJavaInstant())
-                it[updatedAt] = java.sql.Timestamp.from(now.toJavaInstant())
+            EventsTable.insert { stmt ->
+                stmt[EventsTable.id] = event.id.value
+                stmt[EventsTable.calendarId] = event.calendarId.value
+                stmt[EventsTable.uid] = event.uid
+                stmt[EventsTable.title] = event.title
+                stmt[EventsTable.description] = event.description
+                stmt[EventsTable.location] = event.location
+                stmt[EventsTable.startTime] = java.sql.Timestamp.from(event.startTime.toJavaInstant())
+                stmt[EventsTable.endTime] = java.sql.Timestamp.from(event.endTime.toJavaInstant())
+                stmt[EventsTable.timeZone] = event.timeZone
+                stmt[EventsTable.isAllDay] = event.isAllDay
+                stmt[EventsTable.recurrenceRule] = event.recurrenceRule
+                stmt[EventsTable.createdAt] = java.sql.Timestamp.from(now.toJavaInstant())
+                stmt[EventsTable.updatedAt] = java.sql.Timestamp.from(now.toJavaInstant())
             }
         }
         
