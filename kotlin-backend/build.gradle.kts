@@ -65,7 +65,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-datetime:$kotlinxDatetimeVersion")
     
     // ICS Parsing
-    implementation("net.fortuna.ical4j:ical4j:3.2.12")
+    implementation("org.mnode.ical4j:ical4j:3.2.10")
     
     // Email
     implementation("org.simplejavamail:simple-java-mail:7.5.0")
