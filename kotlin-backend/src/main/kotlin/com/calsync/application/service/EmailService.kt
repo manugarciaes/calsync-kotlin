@@ -10,12 +10,12 @@ import kotlinx.datetime.toJavaLocalDateTime
 import kotlinx.datetime.toLocalDateTime
 import org.slf4j.LoggerFactory
 import java.time.format.DateTimeFormatter
-import javax.mail.Message
-import javax.mail.MessagingException
-import javax.mail.Session
-import javax.mail.Transport
-import javax.mail.internet.InternetAddress
-import javax.mail.internet.MimeMessage
+import jakarta.mail.Message
+import jakarta.mail.MessagingException
+import jakarta.mail.Session
+import jakarta.mail.Transport
+import jakarta.mail.internet.InternetAddress
+import jakarta.mail.internet.MimeMessage
 import java.util.Properties
 
 /**
@@ -212,9 +212,9 @@ class EmailService(
             properties["mail.smtp.starttls.enable"] = "true"
             
             // Create session
-            val session = Session.getInstance(properties, object : javax.mail.Authenticator() {
-                override fun getPasswordAuthentication(): javax.mail.PasswordAuthentication {
-                    return javax.mail.PasswordAuthentication(username, password)
+            val session = Session.getInstance(properties, object : jakarta.mail.Authenticator() {
+                override fun getPasswordAuthentication(): jakarta.mail.PasswordAuthentication {
+                    return jakarta.mail.PasswordAuthentication(username, password)
                 }
             })
             

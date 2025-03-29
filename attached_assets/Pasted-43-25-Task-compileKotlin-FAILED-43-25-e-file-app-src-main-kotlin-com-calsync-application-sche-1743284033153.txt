@@ -1,0 +1,308 @@
+43.25 > Task :compileKotlin FAILED
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/scheduler/CalendarSyncScheduler.kt:190:67 Unresolved reference: id
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/BookingService.kt:43:32 Unresolved reference: toJavaLocalDate
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:13:14 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:14:14 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:15:14 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:16:14 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:17:14 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:18:14 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:215:27 Unresolved reference: Session
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:215:74 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:216:17 'getPasswordAuthentication' overrides nothing
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:216:65 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:217:34 Unresolved reference: mail
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:222:27 Unresolved reference: MimeMessage
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:223:29 Unresolved reference: InternetAddress
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:224:35 Unresolved reference: Message
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:224:61 Unresolved reference: InternetAddress
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:225:21 Variable expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:229:13 Unresolved reference: Transport
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/EmailService.kt:233:21 Unresolved reference: MessagingException
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:59:29 Type mismatch: inferred type is kotlinx.datetime.LocalDate? but java.time.LocalDate? was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:60:27 Type mismatch: inferred type is kotlinx.datetime.LocalDate? but java.time.LocalDate? was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:95:29 Type mismatch: inferred type is Comparable<{ChronoLocalDate & LocalDate}>? but java.time.LocalDate? was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:96:27 Type mismatch: inferred type is Comparable<{ChronoLocalDate & LocalDate}>? but java.time.LocalDate? was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:218:60 Type mismatch: inferred type is java.time.LocalDate but kotlinx.datetime.LocalDate was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:221:58 Type mismatch: inferred type is java.time.LocalDate but kotlinx.datetime.LocalDate was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:320:37 Unresolved reference: startHour
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:320:58 Unresolved reference: startMinute
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:325:37 Unresolved reference: endHour
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:325:56 Unresolved reference: endMinute
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/FreeSlotService.kt:367:50 Suspend function 'countBookingsByFreeSlotAndDate' should be called only from a coroutine or another suspend function
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/UserService.kt:6:12 Unresolved reference: mindrot
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/UserService.kt:33:34 Unresolved reference: BCrypt
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/UserService.kt:33:66 Unresolved reference: BCrypt
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/UserService.kt:63:18 Unresolved reference: BCrypt
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/UserService.kt:109:21 Unresolved reference: BCrypt
+43.25 e: file:///app/src/main/kotlin/com/calsync/application/service/UserService.kt:109:53 Unresolved reference: BCrypt
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Booking.kt:11:13 Redeclaration: BookingId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Calendar.kt:11:13 Redeclaration: CalendarId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Event.kt:11:13 Redeclaration: EventId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/FreeSlot.kt:13:13 Redeclaration: FreeSlotId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:11:13 Redeclaration: UserId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:11:31 Serializer has not been found for type 'UUID'. To use context serializer as fallback, explicitly annotate type or property with @Contextual
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:21:13 Redeclaration: CalendarId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:21:35 Serializer has not been found for type 'UUID'. To use context serializer as fallback, explicitly annotate type or property with @Contextual
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:23:49 Type mismatch: inferred type is UUID! but String was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:31:13 Redeclaration: EventId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:31:32 Serializer has not been found for type 'UUID'. To use context serializer as fallback, explicitly annotate type or property with @Contextual
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:33:43 Type mismatch: inferred type is UUID! but String was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:41:13 Redeclaration: FreeSlotId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:41:35 Serializer has not been found for type 'UUID'. To use context serializer as fallback, explicitly annotate type or property with @Contextual
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:43:49 Type mismatch: inferred type is UUID! but String was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:51:13 Redeclaration: BookingId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:51:34 Serializer has not been found for type 'UUID'. To use context serializer as fallback, explicitly annotate type or property with @Contextual
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/Ids.kt:53:47 Type mismatch: inferred type is UUID! but String was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/User.kt:11:13 Redeclaration: UserId
+43.25 e: file:///app/src/main/kotlin/com/calsync/domain/model/User.kt:13:41 Type mismatch: inferred type is String but UUID was expected
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:14:12 Unresolved reference: google
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:68:8 Redeclaration: UsersTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:69:25 Unresolved reference: primaryKey
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:74:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:75:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:81:8 Redeclaration: CalendarsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:82:25 Unresolved reference: primaryKey
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:83:34 Overload resolution ambiguity: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<TypeVariable(T)>): TypeVariable(C) defined in com.calsync.infrastructure.database.CalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.CalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<EntityID<TypeVariable(T)>>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.CalendarsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:90:22 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:91:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:92:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:102:8 Redeclaration: EventsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:103:25 Unresolved reference: primaryKey
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:104:42 Overload resolution ambiguity: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.EventsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<EntityID<TypeVariable(T)>>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.EventsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:109:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:110:19 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:114:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:115:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:121:9 Overload resolution ambiguity: 
+43.25 public final fun uniqueIndex(vararg columns: Column<*>, filterCondition: FilterCondition /* = (SqlExpressionBuilder.() -> Op<Boolean>)? */ = ...): Unit defined in com.calsync.infrastructure.database.EventsTable
+43.25 public final fun uniqueIndex(customIndexName: String? = ..., vararg columns: Column<*>, functions: List<ExpressionWithColumnType<*>>? = ..., filterCondition: FilterCondition /* = (SqlExpressionBuilder.() -> Op<Boolean>)? */ = ...): Unit defined in com.calsync.infrastructure.database.EventsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:128:8 Redeclaration: FreeSlotsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:129:25 Unresolved reference: primaryKey
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:130:34 Overload resolution ambiguity: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<TypeVariable(T)>): TypeVariable(C) defined in com.calsync.infrastructure.database.FreeSlotsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.FreeSlotsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<EntityID<TypeVariable(T)>>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.FreeSlotsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:139:21 Unresolved reference: date
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:140:19 Unresolved reference: date
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:144:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:145:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:155:8 Redeclaration: BookingsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:156:25 Unresolved reference: primaryKey
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:157:43 Overload resolution ambiguity: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.BookingsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, S : TypeVariable(T), C : Column<TypeVariable(S)>> TypeVariable(C).references(ref: Column<EntityID<TypeVariable(T)>>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): TypeVariable(C) defined in com.calsync.infrastructure.database.BookingsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:160:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:161:19 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:166:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:167:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:178:20 Unresolved reference: Gson
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:187:34 Unresolved reference: it
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/DatabaseConfig.kt:199:27 Unresolved reference: it
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:6:34 Unresolved reference: javatime
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:15:8 Redeclaration: UsersTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:20:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:21:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:27:8 Redeclaration: CalendarsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:28:18 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.CalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.CalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.CalendarsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:35:22 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:36:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:37:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:43:8 Redeclaration: EventsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:44:22 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.EventsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.EventsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.EventsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:49:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:50:19 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:54:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:55:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:65:8 Redeclaration: FreeSlotsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:66:18 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.FreeSlotsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.FreeSlotsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.FreeSlotsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:73:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:74:19 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:77:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:78:21 Unresolved reference: timestamp
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:85:22 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.FreeSlotDaysTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.FreeSlotDaysTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.FreeSlotDaysTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:95:22 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.FreeSlotCalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.FreeSlotCalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.FreeSlotCalendarsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:96:22 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.FreeSlotCalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.FreeSlotCalendarsTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.FreeSlotCalendarsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:98:31 Overload resolution ambiguity: 
+43.25 public constructor PrimaryKey(columns: Array<Column<*>>, name: String? = ...) defined in org.jetbrains.exposed.sql.Table.PrimaryKey
+43.25 public constructor PrimaryKey(firstColumn: Column<*>, vararg columns: Column<*>, name: String? = ...) defined in org.jetbrains.exposed.sql.Table.PrimaryKey
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:105:22 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.FreeSlotTimeRangesTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.FreeSlotTimeRangesTable
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.FreeSlotTimeRangesTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:113:8 Redeclaration: BookingsTable
+43.25 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:114:22 None of the following functions can be called with the arguments supplied: 
+43.25 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, foreign: IdTable<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<EntityID<TypeVariable(T)>> defined in com.calsync.infrastructure.database.BookingsTable
+43.26 public final fun <T : Comparable<TypeVariable(T)>, E : EntityID<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(E)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(E)> defined in com.calsync.infrastructure.database.BookingsTable
+43.26 public final fun <T : Comparable<TypeVariable(T)>> reference(name: String, refColumn: Column<TypeVariable(T)>, onDelete: ReferenceOption? = ..., onUpdate: ReferenceOption? = ..., fkName: String? = ...): Column<TypeVariable(T)> defined in com.calsync.infrastructure.database.BookingsTable
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:117:21 Unresolved reference: timestamp
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:118:19 Unresolved reference: timestamp
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:122:21 Unresolved reference: timestamp
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/database/Tables.kt:123:21 Unresolved reference: timestamp
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:29:74 Type mismatch: inferred type is UUID but String! was expected
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:35:38 Type mismatch: inferred type is UUID but String! was expected
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:43:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:43:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:50:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:50:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:51:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:51:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:56:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:56:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:57:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:57:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:64:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:64:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:65:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:65:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:66:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:66:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:85:13 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:85:15 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:86:13 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:86:15 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:100:29 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:101:29 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:108:26 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:109:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/CalendarRepositoryImpl.kt:110:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:106:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:106:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:111:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:111:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:112:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:112:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:116:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:116:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:121:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:121:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:122:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:122:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:127:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:127:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:128:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:128:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:132:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:132:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:133:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:133:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:162:26 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:163:37 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:168:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:169:23 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:173:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:174:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:22:62 Type mismatch: inferred type is UUID but String! was expected
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:40:38 Type mismatch: inferred type is UUID but String! was expected
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:52:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:52:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:57:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:57:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:62:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:62:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:63:17 Overload resolution ambiguity: 
+43.26 public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:63:19 No set method providing array access
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:74:67 Type mismatch: inferred type is UUID but String! was expected
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:92:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:97:25 Not enough information to infer type variable T
+43.26 e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:98:25 Not enough information to infer type variable T
+43.26 
+43.26 FAILURE: Build failed with an exception.
+43.26 
+43.26 * What went wrong:
+43.26 Execution failed for task ':compileKotlin'.
+43.26 > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+43.26    > Compilation error. See log for more details

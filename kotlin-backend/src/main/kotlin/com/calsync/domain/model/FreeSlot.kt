@@ -4,17 +4,6 @@ import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import java.time.DayOfWeek
 import java.time.LocalDate
-import java.util.UUID
-
-/**
- * FreeSlot ID value object
- */
-@JvmInline
-value class FreeSlotId(val value: String) {
-    companion object {
-        fun generate(): FreeSlotId = FreeSlotId(UUID.randomUUID().toString())
-    }
-}
 
 /**
  * Time range value object
@@ -22,7 +11,13 @@ value class FreeSlotId(val value: String) {
  */
 data class TimeRange(
     val startTime: String,  // HH:mm format
-    val endTime: String     // HH:mm format
+    val endTime: String,    // HH:mm format
+    
+    // For convenience, we add these properties for service code
+    val startHour: Int = startTime.split(":")[0].toInt(),
+    val startMinute: Int = startTime.split(":")[1].toInt(),
+    val endHour: Int = endTime.split(":")[0].toInt(),
+    val endMinute: Int = endTime.split(":")[1].toInt()
 )
 
 /**
@@ -40,8 +35,8 @@ data class FreeSlot(
     val timeZone: String,
     val availableDays: Set<DayOfWeek>,
     val timeRanges: List<TimeRange>,
-    val startDate: LocalDate? = null,
-    val endDate: LocalDate? = null,
+    val startDate: java.time.LocalDate? = null,
+    val endDate: java.time.LocalDate? = null,
     val maxBookingsPerDay: Int? = null,
     val calendarIds: List<CalendarId>,
     val active: Boolean = true,

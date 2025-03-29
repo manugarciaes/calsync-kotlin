@@ -2,17 +2,6 @@ package com.calsync.domain.model
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
-import java.util.UUID
-
-/**
- * Event ID value object
- */
-@JvmInline
-value class EventId(val value: String) {
-    companion object {
-        fun generate(): EventId = EventId(UUID.randomUUID().toString())
-    }
-}
 
 /**
  * Event entity

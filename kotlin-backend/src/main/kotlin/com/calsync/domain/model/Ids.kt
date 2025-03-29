@@ -1,5 +1,6 @@
 package com.calsync.domain.model
 
+import com.calsync.infrastructure.serialization.UUIDSerializer
 import java.util.*
 import kotlinx.serialization.Serializable
 
@@ -8,7 +9,7 @@ import kotlinx.serialization.Serializable
  */
 @JvmInline
 @Serializable
-value class UserId(val value: UUID) : ValueObject {
+value class UserId(@Serializable(with = UUIDSerializer::class) val value: UUID) : ValueObject {
     companion object {
         fun generate(): UserId = UserId(UUID.randomUUID())
     }
@@ -18,7 +19,7 @@ value class UserId(val value: UUID) : ValueObject {
 
 @JvmInline
 @Serializable
-value class CalendarId(val value: UUID) : ValueObject {
+value class CalendarId(@Serializable(with = UUIDSerializer::class) val value: UUID) : ValueObject {
     companion object {
         fun generate(): CalendarId = CalendarId(UUID.randomUUID())
     }
@@ -28,7 +29,7 @@ value class CalendarId(val value: UUID) : ValueObject {
 
 @JvmInline
 @Serializable
-value class EventId(val value: UUID) : ValueObject {
+value class EventId(@Serializable(with = UUIDSerializer::class) val value: UUID) : ValueObject {
     companion object {
         fun generate(): EventId = EventId(UUID.randomUUID())
     }
@@ -38,7 +39,7 @@ value class EventId(val value: UUID) : ValueObject {
 
 @JvmInline
 @Serializable
-value class FreeSlotId(val value: UUID) : ValueObject {
+value class FreeSlotId(@Serializable(with = UUIDSerializer::class) val value: UUID) : ValueObject {
     companion object {
         fun generate(): FreeSlotId = FreeSlotId(UUID.randomUUID())
     }
@@ -48,7 +49,7 @@ value class FreeSlotId(val value: UUID) : ValueObject {
 
 @JvmInline
 @Serializable
-value class BookingId(val value: UUID) : ValueObject {
+value class BookingId(@Serializable(with = UUIDSerializer::class) val value: UUID) : ValueObject {
     companion object {
         fun generate(): BookingId = BookingId(UUID.randomUUID())
     }

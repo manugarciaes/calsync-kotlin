@@ -2,17 +2,6 @@ package com.calsync.domain.model
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
-import java.util.UUID
-
-/**
- * User ID value object
- */
-@JvmInline
-value class UserId(val value: String) {
-    companion object {
-        fun generate(): UserId = UserId(UUID.randomUUID().toString())
-    }
-}
 
 /**
  * User entity

@@ -2,17 +2,6 @@ package com.calsync.domain.model
 
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
-import java.util.UUID
-
-/**
- * Booking ID value object
- */
-@JvmInline
-value class BookingId(val value: String) {
-    companion object {
-        fun generate(): BookingId = BookingId(UUID.randomUUID().toString())
-    }
-}
 
 /**
  * Booking status enum

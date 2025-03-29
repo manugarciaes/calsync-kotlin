@@ -45,12 +45,16 @@ dependencies {
     
     // Serialization
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.2")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-core:1.6.2")
     
     // Database
     implementation("org.jetbrains.exposed:exposed-core:$exposedVersion")
     implementation("org.jetbrains.exposed:exposed-dao:$exposedVersion")
     implementation("org.jetbrains.exposed:exposed-jdbc:$exposedVersion")
     implementation("org.jetbrains.exposed:exposed-kotlin-datetime:$exposedVersion")
+    implementation("org.jetbrains.exposed:exposed-java-time:$exposedVersion")
+    implementation("com.google.cloud.sql:postgres-socket-factory:1.15.1")
     implementation("org.postgresql:postgresql:42.7.1")
     implementation("com.zaxxer:HikariCP:5.1.0")
     
@@ -69,6 +73,8 @@ dependencies {
     
     // Email
     implementation("org.simplejavamail:simple-java-mail:7.5.0")
+    implementation("jakarta.mail:jakarta.mail-api:2.1.2")
+    implementation("org.eclipse.angus:angus-mail:2.0.2")
     
     // HTTP Client
     implementation("io.ktor:ktor-client-core:$ktorVersion")
@@ -77,6 +83,7 @@ dependencies {
     
     // Bcrypt for password hashing
     implementation("at.favre.lib:bcrypt:0.10.2")
+    implementation("org.mindrot:jbcrypt:0.4")
     
     // Testing
     testImplementation("io.ktor:ktor-server-test-host:$ktorVersion")
