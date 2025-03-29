@@ -19,7 +19,7 @@ import java.util.UUID
 class UserRepositoryImpl : UserRepository {
     
     override suspend fun findById(id: UserId): User? = dbQuery {
-        UsersTable.select { UsersTable.id eq UUID.fromString(id.value) }
+        UsersTable.select { UsersTable.id eq id.value }
             .singleOrNull()
             ?.toUser()
     }
@@ -37,14 +37,12 @@ class UserRepositoryImpl : UserRepository {
     }
     
     override suspend fun save(user: User): User = dbQuery {
-        val userId = UUID.fromString(user.id.value)
-        
         // Check if user exists
-        val exists = UsersTable.select { UsersTable.id eq userId }.singleOrNull() != null
+        val exists = UsersTable.select { UsersTable.id eq user.id.value }.singleOrNull() != null
         
         if (exists) {
             // Update existing user
-            UsersTable.update({ UsersTable.id eq userId }) {
+            UsersTable.update({ UsersTable.id eq user.id.value }) {
                 it[username] = user.username
                 it[email] = user.email
                 it[password] = user.password
@@ -54,7 +52,7 @@ class UserRepositoryImpl : UserRepository {
         } else {
             // Insert new user
             UsersTable.insert {
-                it[id] = userId
+                it[id] = user.id.value
                 it[username] = user.username
                 it[email] = user.email
                 it[password] = user.password
@@ -65,13 +63,13 @@ class UserRepositoryImpl : UserRepository {
         }
         
         // Return updated user
-        UsersTable.select { UsersTable.id eq userId }
+        UsersTable.select { UsersTable.id eq user.id.value }
             .single()
             .toUser()
     }
     
     override suspend fun delete(id: UserId): Boolean = dbQuery {
-        UsersTable.deleteWhere { UsersTable.id eq UUID.fromString(id.value) } > 0
+        UsersTable.deleteWhere { UsersTable.id eq id.value } > 0
     }
     
     override suspend fun existsByUsername(username: String): Boolean = dbQuery {

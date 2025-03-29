@@ -29,7 +29,7 @@ class EventRepositoryImpl : EventRepository {
      * Find an event by ID
      */
     override suspend fun findById(id: EventId): Event? = DatabaseConfig.dbQuery {
-        EventsTable.select { EventsTable.id eq UUID.fromString(id.value) }
+        EventsTable.select { EventsTable.id eq id.value }
             .singleOrNull()
             ?.toEvent()
     }
@@ -38,7 +38,7 @@ class EventRepositoryImpl : EventRepository {
      * Find events by calendar ID
      */
     override suspend fun findByCalendarId(calendarId: CalendarId): List<Event> = DatabaseConfig.dbQuery {
-        EventsTable.select { EventsTable.calendarId eq UUID.fromString(calendarId.value) }
+        EventsTable.select { EventsTable.calendarId eq calendarId.value }
             .map { it.toEvent() }
     }
     
@@ -51,8 +51,8 @@ class EventRepositoryImpl : EventRepository {
             return@dbQuery emptyList()
         }
         
-        val calendarUuids = calendarIds.map { UUID.fromString(it.value) }
-        EventsTable.select { EventsTable.calendarId inList calendarUuids }
+        val calendarValues = calendarIds.map { it.value }
+        EventsTable.select { EventsTable.calendarId inList calendarValues }
             .map { it.toEvent() }
     }
     
@@ -69,14 +69,14 @@ class EventRepositoryImpl : EventRepository {
             return@dbQuery emptyList()
         }
         
-        val calendarUuids = calendarIds.map { UUID.fromString(it.value) }
+        val calendarValues = calendarIds.map { it.value }
         
         // Convert Instant to java.sql.Timestamp
         val start = java.sql.Timestamp.from(startTime.toJavaInstant())
         val end = java.sql.Timestamp.from(endTime.toJavaInstant())
         
         EventsTable.select {
-            (EventsTable.calendarId inList calendarUuids) and
+            (EventsTable.calendarId inList calendarValues) and
                     (
                             // Event starts within range
                             (EventsTable.startTime greaterEq start and (EventsTable.startTime less end)) or
@@ -93,17 +93,15 @@ class EventRepositoryImpl : EventRepository {
      * Save an event (create or update)
      */
     override suspend fun save(event: Event): Event = DatabaseConfig.dbQuery {
-        val uuid = UUID.fromString(event.id.value)
-        
         // Check if event exists
-        val exists = EventsTable.select { EventsTable.id eq uuid }.count() > 0
+        val exists = EventsTable.select { EventsTable.id eq event.id.value }.count() > 0
         
         val now = LocalDateTime.now().toInstant(ZoneOffset.UTC).toKotlinInstant()
         
         if (exists) {
             // Update existing event
-            EventsTable.update({ EventsTable.id eq uuid }) {
-                it[calendarId] = UUID.fromString(event.calendarId.value)
+            EventsTable.update({ EventsTable.id eq event.id.value }) {
+                it[calendarId] = event.calendarId.value
                 it[uid] = event.uid
                 it[title] = event.title
                 it[description] = event.description
@@ -118,8 +116,8 @@ class EventRepositoryImpl : EventRepository {
         } else {
             // Insert new event
             EventsTable.insert {
-                it[id] = uuid
-                it[calendarId] = UUID.fromString(event.calendarId.value)
+                it[id] = event.id.value
+                it[calendarId] = event.calendarId.value
                 it[uid] = event.uid
                 it[title] = event.title
                 it[description] = event.description
@@ -142,16 +140,14 @@ class EventRepositoryImpl : EventRepository {
      * Delete an event by ID
      */
     override suspend fun delete(id: EventId): Boolean = DatabaseConfig.dbQuery {
-        val uuid = UUID.fromString(id.value)
-        EventsTable.deleteWhere { EventsTable.id eq uuid } > 0
+        EventsTable.deleteWhere { EventsTable.id eq id.value } > 0
     }
     
     /**
      * Delete all events for a calendar
      */
     override suspend fun deleteByCalendarId(calendarId: CalendarId): Boolean = DatabaseConfig.dbQuery {
-        val uuid = UUID.fromString(calendarId.value)
-        EventsTable.deleteWhere { EventsTable.calendarId eq uuid } > 0
+        EventsTable.deleteWhere { EventsTable.calendarId eq calendarId.value } > 0
     }
     
     /**

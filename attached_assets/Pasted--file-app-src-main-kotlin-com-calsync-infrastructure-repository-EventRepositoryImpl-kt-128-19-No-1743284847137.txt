@@ -1,0 +1,39 @@
+: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:128:19 No set method providing array access
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:132:17 Overload resolution ambiguity: 
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:132:19 No set method providing array access
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:133:17 Overload resolution ambiguity: 
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:133:19 No set method providing array access
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:145:36 Type mismatch: inferred type is UUID but String! was expected
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:153:36 Type mismatch: inferred type is UUID but String! was expected
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:162:26 Not enough information to infer type variable T
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:163:37 Not enough information to infer type variable T
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:168:25 Not enough information to infer type variable T
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:169:23 Not enough information to infer type variable T
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:173:25 Not enough information to infer type variable T
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/EventRepositoryImpl.kt:174:25 Not enough information to infer type variable T
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:22:62 Type mismatch: inferred type is UUID but String! was expected
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:40:38 Type mismatch: inferred type is UUID but String! was expected
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:52:17 Overload resolution ambiguity: 
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+calsync-backend-dev   | public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.UpdateStatement
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:52:19 No set method providing array access
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:57:17 Overload resolution ambiguity: 
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:57:19 No set method providing array access
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:62:17 Overload resolution ambiguity: 
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public open fun <S> set(column: CompositeColumn<TypeVariable(S)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:62:19 No set method providing array access
+calsync-backend-dev   | e: file:///app/src/main/kotlin/com/calsync/infrastructure/repository/UserRepositoryImpl.kt:63:17 Overload resolution ambiguity: 
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>, ID : EntityID<TypeVariable(S)>> set(column: Column<TypeVariable(ID)>, value: TypeVariable(S)): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
+calsync-backend-dev   | public final fun <S : Comparable<TypeVariable(S)>> set(column: Column<EntityID<TypeVariable(S)>?>, value: TypeVariable(S)?): Unit defined in org.jetbrains.exposed.sql.statements.InsertStatement
