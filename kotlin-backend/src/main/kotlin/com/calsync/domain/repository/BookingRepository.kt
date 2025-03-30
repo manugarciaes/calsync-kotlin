@@ -2,8 +2,8 @@ package com.calsync.domain.repository
 
 import com.calsync.domain.model.Booking
 import com.calsync.domain.model.BookingId
-import com.calsync.domain.model.BookingStatus
 import com.calsync.domain.model.FreeSlotId
+import com.calsync.domain.model.BookingStatus
 import kotlinx.datetime.Instant
 
 /**
@@ -11,55 +11,41 @@ import kotlinx.datetime.Instant
  */
 interface BookingRepository {
     /**
-     * Find a booking by ID
+     * Get all bookings for a free slot
      */
-    suspend fun findById(id: BookingId): Booking?
+    suspend fun getBookingsByFreeSlotId(freeSlotId: FreeSlotId): List<Booking>
     
     /**
-     * Find bookings by free slot ID
+     * Get bookings for a free slot within a time range
      */
-    suspend fun findByFreeSlotId(freeSlotId: FreeSlotId): List<Booking>
-    
-    /**
-     * Find bookings by free slot ID and status
-     */
-    suspend fun findByFreeSlotIdAndStatus(freeSlotId: FreeSlotId, status: BookingStatus): List<Booking>
-    
-    /**
-     * Find bookings for a specific date range
-     */
-    suspend fun findByTimeRange(startTime: Instant, endTime: Instant): List<Booking>
-    
-    /**
-     * Find bookings for a free slot in a specific date range
-     */
-    suspend fun findByFreeSlotIdAndTimeRange(
+    suspend fun getBookingsByFreeSlotIdAndTimeRange(
         freeSlotId: FreeSlotId,
         startTime: Instant,
         endTime: Instant
     ): List<Booking>
     
     /**
-     * Count bookings for a free slot on a specific date
+     * Get a booking by ID
      */
-    suspend fun countBookingsByFreeSlotAndDate(
-        freeSlotId: FreeSlotId,
-        startOfDay: Instant,
-        endOfDay: Instant
-    ): Int
+    suspend fun getBookingById(id: BookingId): Booking?
     
     /**
-     * Save a booking (create or update)
+     * Create a new booking
      */
-    suspend fun save(booking: Booking): Booking
+    suspend fun createBooking(booking: Booking): Booking
     
     /**
-     * Update the status of a booking
+     * Update a booking
      */
-    suspend fun updateStatus(id: BookingId, status: BookingStatus, reason: String? = null): Booking?
+    suspend fun updateBooking(booking: Booking): Booking
     
     /**
-     * Delete a booking by ID
+     * Update booking status
      */
-    suspend fun delete(id: BookingId): Boolean
+    suspend fun updateBookingStatus(id: BookingId, status: BookingStatus, cancelReason: String? = null): Booking?
+    
+    /**
+     * Delete a booking
+     */
+    suspend fun deleteBooking(id: BookingId): Boolean
 }

@@ -119,6 +119,7 @@ object BookingsTable : UUIDTable(name = "bookings") {
     val timeZone = varchar("time_zone", 50)
     val notes = text("notes").nullable()
     val status = enumeration<BookingStatus>("status")
+    val cancelReason = text("cancel_reason").nullable()
     val createdAt = timestamp("created_at")
     val updatedAt = timestamp("updated_at")
 }

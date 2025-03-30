@@ -3,38 +3,39 @@ package com.calsync.domain.repository
 import com.calsync.domain.model.FreeSlot
 import com.calsync.domain.model.FreeSlotId
 import com.calsync.domain.model.UserId
+import java.time.LocalDate
 
 /**
  * Repository interface for FreeSlot entities
  */
 interface FreeSlotRepository {
     /**
-     * Find a free slot by ID
+     * Get all free slots for a user
      */
-    suspend fun findById(id: FreeSlotId): FreeSlot?
+    suspend fun getFreeSlotsByUserId(userId: UserId): List<FreeSlot>
     
     /**
-     * Find a free slot by share URL
+     * Get a free slot by ID
      */
-    suspend fun findByShareUrl(shareUrl: String): FreeSlot?
+    suspend fun getFreeSlotById(id: FreeSlotId): FreeSlot?
     
     /**
-     * Find free slots by user ID
+     * Get a free slot by share URL
      */
-    suspend fun findByUserId(userId: UserId): List<FreeSlot>
+    suspend fun getFreeSlotByShareUrl(shareUrl: String): FreeSlot?
     
     /**
-     * Save a free slot (create or update)
+     * Create a new free slot
      */
-    suspend fun save(freeSlot: FreeSlot): FreeSlot
+    suspend fun createFreeSlot(freeSlot: FreeSlot): FreeSlot
     
     /**
-     * Delete a free slot by ID
+     * Update an existing free slot
      */
-    suspend fun delete(id: FreeSlotId): Boolean
+    suspend fun updateFreeSlot(freeSlot: FreeSlot): FreeSlot
     
     /**
-     * Update the active status of a free slot
+     * Delete a free slot
      */
-    suspend fun updateActiveStatus(id: FreeSlotId, active: Boolean): Boolean
+    suspend fun deleteFreeSlot(id: FreeSlotId): Boolean
 }
