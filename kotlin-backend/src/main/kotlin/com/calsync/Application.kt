@@ -16,6 +16,7 @@ import com.calsync.infrastructure.api.calendarRoutes
 import com.calsync.infrastructure.api.freeSlotRoutes
 import com.calsync.infrastructure.api.userRoutes
 import com.calsync.infrastructure.api.utils.JwtConfig
+import com.calsync.infrastructure.api.utils.configureErrorHandling
 import com.calsync.infrastructure.database.DatabaseConfig
 import com.calsync.infrastructure.repository.BookingRepositoryImpl
 import com.calsync.infrastructure.repository.CalendarRepositoryImpl
@@ -70,6 +71,7 @@ fun main() {
         configureHTTP()
         configureSerialization()
         configureAuthentication()
+        configureErrorHandling()
     }.start(wait = true)
 }
 
