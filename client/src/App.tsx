@@ -12,6 +12,8 @@ import PublicCalendarPage from "@/pages/public-calendar-page";
 import { ProtectedRoute } from "./lib/protected-route";
 import { AuthProvider } from "./hooks/use-auth";
 import { TranslationsProvider } from "./hooks/use-translations";
+import { CalendarsProvider } from "./hooks/use-calendars";
+import { FreeSlotsProvider } from "./hooks/use-free-slots";
 
 function Router() {
   return (
@@ -32,8 +34,12 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <TranslationsProvider>
         <AuthProvider>
-          <Router />
-          <Toaster />
+          <CalendarsProvider>
+            <FreeSlotsProvider>
+              <Router />
+              <Toaster />
+            </FreeSlotsProvider>
+          </CalendarsProvider>
         </AuthProvider>
       </TranslationsProvider>
     </QueryClientProvider>

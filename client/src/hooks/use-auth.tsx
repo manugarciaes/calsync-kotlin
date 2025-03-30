@@ -1,21 +1,36 @@
-import { createContext, ReactNode, useContext } from "react";
+import { createContext, ReactNode, useContext, useEffect } from "react";
 import {
   useQuery,
   useMutation,
   UseMutationResult,
 } from "@tanstack/react-query";
-import { insertUserSchema, User } from "@shared/schema";
-import { getQueryFn, apiRequest, queryClient } from "../lib/queryClient";
+import { insertUserSchema } from "@shared/schema";
+import { getQueryFn, apiRequest, queryClient, setAuthToken, removeAuthToken } from "../lib/queryClient";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 
+// Define user type to match Kotlin backend response
+interface KotlinUser {
+  id: string;
+  username: string;
+  email: string;
+  name: string;
+  createdAt: string;
+}
+
+// Define auth response from Kotlin backend
+interface AuthResponse {
+  token: string;
+  user: KotlinUser;
+}
+
 type AuthContextType = {
-  user: Omit<User, "password"> | null;
+  user: KotlinUser | null;
   isLoading: boolean;
   error: Error | null;
-  loginMutation: UseMutationResult<Omit<User, "password">, Error, LoginData>;
+  loginMutation: UseMutationResult<KotlinUser, Error, LoginData>;
   logoutMutation: UseMutationResult<void, Error, void>;
-  registerMutation: UseMutationResult<Omit<User, "password">, Error, RegisterData>;
+  registerMutation: UseMutationResult<KotlinUser, Error, RegisterData>;
 };
 
 // Extend the insertUserSchema for registration
@@ -26,7 +41,11 @@ const registerSchema = insertUserSchema.extend({
   path: ["confirmPassword"],
 });
 
-type LoginData = Pick<User, "username" | "password">;
+type LoginData = {
+  username: string;
+  password: string;
+};
+
 type RegisterData = z.infer<typeof registerSchema>;
 
 export const AuthContext = createContext<AuthContextType | null>(null);
@@ -38,18 +57,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     data: user,
     error,
     isLoading,
-  } = useQuery<Omit<User, "password"> | undefined, Error>({
-    queryKey: ["/api/user"],
+    refetch
+  } = useQuery<KotlinUser | undefined, Error>({
+    queryKey: ["/user"],
     queryFn: getQueryFn({ on401: "returnNull" }),
   });
 
+  // Check for token on mount
+  useEffect(() => {
+    // If we have a token but no user, refetch user data
+    if (localStorage.getItem("auth_token") && !user) {
+      refetch();
+    }
+  }, [refetch]);
+
   const loginMutation = useMutation({
     mutationFn: async (credentials: LoginData) => {
-      const res = await apiRequest("POST", "/api/login", credentials);
-      return await res.json();
+      const res = await apiRequest("POST", "/login", credentials);
+      const authResponse = await res.json() as AuthResponse;
+      
+      // Store the JWT token
+      setAuthToken(authResponse.token);
+      
+      return authResponse.user;
     },
-    onSuccess: (user: Omit<User, "password">) => {
-      queryClient.setQueryData(["/api/user"], user);
+    onSuccess: (user: KotlinUser) => {
+      queryClient.setQueryData(["/user"], user);
       toast({
         title: "Login successful",
         description: "Welcome back!",
@@ -68,11 +101,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     mutationFn: async (credentials: RegisterData) => {
       // Remove confirmPassword before sending to API
       const { confirmPassword, ...userData } = credentials;
-      const res = await apiRequest("POST", "/api/register", userData);
-      return await res.json();
+      const res = await apiRequest("POST", "/register", userData);
+      const authResponse = await res.json() as AuthResponse;
+      
+      // Store the JWT token
+      setAuthToken(authResponse.token);
+      
+      return authResponse.user;
     },
-    onSuccess: (user: Omit<User, "password">) => {
-      queryClient.setQueryData(["/api/user"], user);
+    onSuccess: (user: KotlinUser) => {
+      queryClient.setQueryData(["/user"], user);
       toast({
         title: "Registration successful",
         description: "Welcome to CalSync!",
@@ -89,10 +127,15 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logoutMutation = useMutation({
     mutationFn: async () => {
-      await apiRequest("POST", "/api/logout");
+      // No need to call the backend for JWT logout
+      // Just remove the token from local storage
+      removeAuthToken();
     },
     onSuccess: () => {
-      queryClient.setQueryData(["/api/user"], null);
+      queryClient.setQueryData(["/user"], null);
+      // Invalidate all queries to force refetch when logging back in
+      queryClient.invalidateQueries();
+      
       toast({
         title: "Logged out",
         description: "You have been logged out successfully",
